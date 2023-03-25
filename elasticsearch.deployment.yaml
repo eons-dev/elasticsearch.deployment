@@ -1,0 +1,9 @@
+namespace: siem
+name: elasticsearch
+nodeGroup: "master"
+image: "docker.elastic.co/elasticsearch/elasticsearch"
+imageTag: "8.5.1"
+configure: |
+  verbosity: 5
+  networkHost: "0.0.0.0"
+{re.sub('^', '    ', configure, flags=re.M)}
